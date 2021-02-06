@@ -408,7 +408,7 @@ function library:Window(title)
 
 				rlpos = (ms.X-ap.X)
 				rlsiz = (ms.X-ap.X)
-				local result = math.min(math.max(math.floor(max * (rlsiz / 226)), max), 0)
+				local result = math.floor(max * (rlsiz / 226))
 
 				if rlpos <= 226 then
 					if rlpos > 0 then
@@ -419,12 +419,10 @@ function library:Window(title)
 					else
 						amt.Text = '0'
 						bar.Visible = false
-						callback(result)
 					end
 				elseif rlpos >= 226 then
 					amt.Text = tostring(max)
 					bar.Size = UDim2.new(0, 226, 0, 9)
-					callback(result)
 				end
 			end
 		end)
