@@ -106,6 +106,9 @@ function library:Window(title)
 	ScrollingFrame.Selectable = false
 	ScrollingFrame.Size = UDim2.new(0, 248, 0, 279)
 	ScrollingFrame.ScrollBarThickness = 4
+	ScrollingFrame.ChildAdded:Connect(function()
+		ScrollingFrame.CanvasSize = UIListLayout.AbsoluteContentSize
+	end)
 
 	UIListLayout.Parent = ScrollingFrame
 	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
