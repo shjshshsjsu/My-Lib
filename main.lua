@@ -112,7 +112,7 @@ function library:Window(title)
 
 	ScrollingFrame.ChildAdded:Connect(function()
 		local ab = UIListLayout.AbsoluteContentSize
-		ScrollingFrame.CanvasSize = UDim2.new(ab.X, ab.Y)
+		ScrollingFrame.CanvasSize = UDim2.new(0,ab.X, 0,ab.Y)
 	end)
 	
 	local UserInputService = game:GetService("UserInputService")
