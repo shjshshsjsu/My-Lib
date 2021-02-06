@@ -436,6 +436,7 @@ function library:Window(title)
 				
 			end
 		end)
+		ScrollingFrame = UIListLayout.AbsoluteContentSize
 	end
 
 	pcall(function()
