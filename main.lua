@@ -414,13 +414,14 @@ function library:Window(title)
 				end
 
 				if rlpos <= 226 then
-					if rlpos > 0 then
+					if rlpos >= 0 then
 						amt.Text = tostring(result)
 						bar.Size = UDim2.new(0, rlsiz, 0, 9)
 						bar.Visible = true
 						callback(result)
-					else
-						amt.Text = '0'
+					elseif rlpos <= 0 then
+						amt.Text = tostring(result)
+						bar.Size = UDim2.new(0, 0, 0, 9)
 						bar.Visible = false
 						callback(0)
 					end
@@ -429,9 +430,7 @@ function library:Window(title)
 					bar.Size = UDim2.new(0, 226, 0, 9)
 					callback(max)
 				end
-				if result and result >= max then
-					callback(max)
-				end
+				
 			end
 		end)
 	end
