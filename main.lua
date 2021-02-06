@@ -429,6 +429,11 @@ function library:Window(title)
 					bar.Size = UDim2.new(0, 226, 0, 9)
 					callback(max)
 				end
+				if result >= max then
+					callback(max)
+				else
+					callback()
+				end
 			end
 		end)
 	end
