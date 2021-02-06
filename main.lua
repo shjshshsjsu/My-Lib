@@ -9,7 +9,7 @@ local LocalPlayer = Players.LocalPlayer
 
 local library = {}
 
-function library:NewWindow(title)
+function library:Window(title)
 	local window = {}
 
 	local ScreenGui = Instance.new("ScreenGui")
