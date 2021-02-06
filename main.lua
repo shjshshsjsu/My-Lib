@@ -167,7 +167,7 @@ function library:Toggle(text, callback)
 	TextLabel_2.Position = UDim2.new(0.0368297361, 0, 0.178787738, 0)
 	TextLabel_2.Size = UDim2.new(0, 189, 0, 18)
 	TextLabel_2.Font = Enum.Font.GothamSemibold
-	TextLabel_2.Text = "Toggle"
+	TextLabel_2.Text = text
 	TextLabel_2.TextColor3 = Color3.fromRGB(176, 176, 176)
 	TextLabel_2.TextSize = 13.000
 	TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
@@ -326,7 +326,7 @@ function library:Slider(text, options, callback)
 	TextLabel_3.Position = UDim2.new(0.0368297361, 0, 0.135309443, 0)
 	TextLabel_3.Size = UDim2.new(0, 159, 0, 15)
 	TextLabel_3.Font = Enum.Font.GothamSemibold
-	TextLabel_3.Text = "Slider"
+	TextLabel_3.Text = text
 	TextLabel_3.TextColor3 = Color3.fromRGB(176, 176, 176)
 	TextLabel_3.TextSize = 13.000
 	TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
