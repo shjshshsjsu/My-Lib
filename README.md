@@ -1,8 +1,8 @@
 Usage
 ```csharp
 Window(<string> title)
-  Toggle(<string> text, <function> callback)
-  Slider(<string> text, <table> options {max, default}, <function> callback)
+  |Toggle(<string> text, <function> callback)
+  |Slider(<string> text, <table> options {max, default}, <function> callback)
 ```
   
 Example
