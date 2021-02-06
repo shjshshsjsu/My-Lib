@@ -1,9 +1,11 @@
-##Usage
+Usage
+```csharp
 Window(<string> title)
   Toggle(<string> text, <function> callback)
-  Slider(<string> text, <table> options (max, default), <function> callback)
+  Slider(<string> text, <table> options {max, default}, <function> callback)
+```
   
-##Example
+Example
 ```lua
 local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/loglizzy/lib/main/main.lua'))()
 local window = lib:Window('title here')
