@@ -107,7 +107,8 @@ function library:Window(title)
 	ScrollingFrame.Size = UDim2.new(0, 248, 0, 279)
 	ScrollingFrame.ScrollBarThickness = 4
 	ScrollingFrame.ChildAdded:Connect(function()
-		ScrollingFrame.CanvasSize = UIListLayout.AbsoluteContentSize
+		local ab = UIListLayout.AbsoluteContentSize
+		ScrollingFrame.CanvasSize = UDim2.new(ab.X, ab.Y)
 	end)
 
 	UIListLayout.Parent = ScrollingFrame
@@ -306,7 +307,6 @@ function library:Window(title)
 			end
 			c:Destroy()
 		end)
-		ScrollingFrame.CanvasSize = UIListLayout.AbsoluteContentSize
 	end
 
 	function window:Slider(text, options, callback)
@@ -440,7 +440,6 @@ function library:Window(title)
 				
 			end
 		end)
-		ScrollingFrame.CanvasSize = UIListLayout.AbsoluteContentSize
 	end
 
 	pcall(function()
