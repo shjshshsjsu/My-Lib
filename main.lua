@@ -432,7 +432,7 @@ function library:Window(title)
 				if result >= max then
 					callback(max)
 				else
-					callback()
+					callback(result)
 				end
 			end
 		end)
