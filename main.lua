@@ -415,10 +415,12 @@ function library:Slider(text, options, callback)
 				else
 					amt.Text = '0'
 					bar.Visible = false
+					callback(math.floor(max * (rlsiz / 226)))
 				end
 			elseif rlpos >= 226 then
 				amt.Text = tostring(max)
 				bar.Size = UDim2.new(0, 226, 0, 9)
+				callback(math.floor(max * (rlsiz / 226)))
 			end
 		end
 	end)
