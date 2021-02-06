@@ -409,8 +409,10 @@ function library:Window(title)
 				rlpos = (ms.X-ap.X)
 				rlsiz = (ms.X-ap.X)
 				local result = math.floor(max * (rlsiz / 226))
-				if result - max > 0 then
+				if result > max then
 					result = max
+				elseif result < 0 then
+					result = 0
 				end
 
 				if rlpos <= 226 then
