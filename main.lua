@@ -106,14 +106,15 @@ function library:Window(title)
 	ScrollingFrame.Selectable = false
 	ScrollingFrame.Size = UDim2.new(0, 248, 0, 279)
 	ScrollingFrame.ScrollBarThickness = 4
-	ScrollingFrame.ChildAdded:Connect(function()
-		local ab = UIListLayout.AbsoluteContentSize
-		ScrollingFrame.CanvasSize = UDim2.new(ab.X, ab.Y)
-	end)
 
 	UIListLayout.Parent = ScrollingFrame
 	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
+	ScrollingFrame.ChildAdded:Connect(function()
+		local ab = UIListLayout.AbsoluteContentSize
+		ScrollingFrame.CanvasSize = UDim2.new(ab.X, ab.Y)
+	end)
+	
 	local UserInputService = game:GetService("UserInputService")
 
 	local gui = Frame.Parent
