@@ -429,3 +429,4 @@ pcall(function()
 end)
 
 ScreenGui.Parent = CoreGui
+return library
