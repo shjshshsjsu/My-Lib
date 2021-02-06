@@ -303,6 +303,7 @@ function library:Window(title)
 			end
 			c:Destroy()
 		end)
+		ScrollingFrame.CanvasSize = UIListLayout.AbsoluteContentSize
 	end
 
 	function window:Slider(text, options, callback)
@@ -436,7 +437,7 @@ function library:Window(title)
 				
 			end
 		end)
-		ScrollingFrame = UIListLayout.AbsoluteContentSize
+		ScrollingFrame.CanvasSize = UIListLayout.AbsoluteContentSize
 	end
 
 	pcall(function()
