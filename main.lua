@@ -378,8 +378,8 @@ function library:Window(title)
 		local hold = false
 		local bar = pr.Frame.bar
 		local amt = pr.Parent.amount
-		local max = 100
-		local default = 16
+		local max = options.max
+		local default = options.def or options.default
 
 		local plr = game.Players.LocalPlayer
 		local ms = plr:GetMouse()
