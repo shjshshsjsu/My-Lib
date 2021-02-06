@@ -427,7 +427,7 @@ function library:Window(title)
 				elseif rlpos >= 226 then
 					amt.Text = tostring(max)
 					bar.Size = UDim2.new(0, 226, 0, 9)
-					callback(266)
+					callback(max)
 				end
 			end
 		end)
