@@ -1,6 +1,6 @@
 Usage
 ```csharp
-Window(<string> title)
+Window(<string> title, <bool> noduplication)
    Toggle(<string> text, <function> callback)
    Slider(<string> text, <table> options {max, default}, <function> callback)
 ```
@@ -8,7 +8,7 @@ Window(<string> title)
 Example
 ```lua
 local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/loglizzy/lib/main/main.lua'))()
-local window = lib:Window('title here')
+local window = lib:Window('title here', true)
 
 window:Toggle('toggle', function(enabled)
      print(enabled)
