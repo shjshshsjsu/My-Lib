@@ -7,21 +7,12 @@ local CoreGui = game:GetService("CoreGui")
 
 local LocalPlayer = Players.LocalPlayer
 
-local sprotect = function(ui) -- always run before parenting and make it a technical global for future use
-	pcall(function() -- no err
-		syn.protect_gui(ui)
-	end)
-end
-
 local library = {}
 
-function library:Window(title,noduplication)
-	local doret = false
+function library:Window(title)
 	local window = {}
 
 	local ScreenGui = Instance.new("ScreenGui")
-	sprotect(ScreenGui)
-	local ref = Instance.new("StringValue")
 	local ImageLabel = Instance.new("ImageLabel")
 	local Frame = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
@@ -36,29 +27,6 @@ function library:Window(title,noduplication)
 	local ScrollingFrame = Instance.new("ScrollingFrame")
 	local UIListLayout = Instance.new("UIListLayout")
 	local Frame_5 = Instance.new("Frame")
-
-	ref.Parent = ScreenGui
-	ref.Name = "REF"
-	ref.Value = title
-	if noduplication then
-		for index,obj in pairs(CoreGui:GetChildren()) do
-			pcall(function()
-				if obj:FindFirstChild("REF") then
-					if obj:FindFirstChild("REF").Value == title then doret = true end
-				end
-			end)
-		end
-	end
-
-	if doret then
-		-- cleanup
-		for _,v in pairs(game:GetChildren()) do
-			pcall(function()
-				if v==ScreenGui or v==ref or v==ImageLabel or v==Frame or v==UICorner or v==Frame_2 or v==UICorner_2 or v==Frame_3 or v==TextLabel or v==fiver_manual_record or v==Sample or v==Frame_4 or v==UIGradient or v==ScrollingFrame or v==UIListLayout or v==Frame_5 then v:Destroy() end
-			end)
-		end
-		return
-	end
 
 	ImageLabel.Parent = ScreenGui
 	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -474,6 +442,10 @@ function library:Window(title,noduplication)
 			end
 		end)
 	end
+
+	pcall(function()
+  		syn.protect_gui(ScreenGui) -- Synapse function makes the ui object undetectable for any non synapse script
+	end)
 	ScreenGui.Parent = CoreGui
 	return window
 end
