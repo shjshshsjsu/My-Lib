@@ -1,6 +1,6 @@
 Usage
 ```csharp
-Window(<string> title, <bool> noduplication)
+Window(<string> title)
    Toggle(<string> text, <function> callback)
    Slider(<string> text, <table> options {max, default}, <function> callback)
 ```
