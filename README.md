@@ -1,3 +1,5 @@
+VERY BAD BTW, I DID IT SOME YEARS AGO AND STOPPED SUDDENLY
+
 Usage
 ```csharp
 Window(<string> title)
