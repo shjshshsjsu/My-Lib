@@ -353,7 +353,6 @@ function library:Window(title)
 		Frame_7.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
 		Frame_7.Position = UDim2.new(0.0167364683, 0, 0.195085526, 0)
 		Frame_7.Size = UDim2.new(0, 226, 0, 9)
-
 		UICorner_3.Parent = Frame_7
 
 		bar.Name = "bar"
@@ -464,6 +463,9 @@ function library:Window(title)
 	Button.Text = text
 	Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 	Button.TextSize = 14.000
+
+
+	Button.MouseButton1Click:Connect(callback(function()))
 	end
 	
 	pcall(function()
