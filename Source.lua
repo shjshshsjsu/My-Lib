@@ -1,6 +1,4 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local UserInputService = game:GetService("UserInputService")
-local RunService = game:GetService("RunService")
+local ReplicatedStorageervice = game:GetService("RunService")
 local Workspace = game:GetService("Workspace")
 local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
@@ -465,7 +463,7 @@ function library:Window(title)
 	Button.TextSize = 14.000
 
 
-	Button.MouseButton1Click:Connect(callback(function()))
+	Button.MouseButton1Click:Connect( callback() )
 	end
 	
 	pcall(function()
