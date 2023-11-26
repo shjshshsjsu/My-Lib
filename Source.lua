@@ -27,7 +27,7 @@ function library:Window(title)
 	local ScrollingFrame = Instance.new("ScrollingFrame")
 	local UIListLayout = Instance.new("UIListLayout")
 	local Frame_5 = Instance.new("Frame")
-
+	
 	ImageLabel.Parent = ScreenGui
 	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	ImageLabel.BackgroundTransparency = 1.000
@@ -443,6 +443,29 @@ function library:Window(title)
 		end)
 	end
 
+        function window:Button(text, callback)
+		
+	local ButtonFrame = Instance.new("Frame")
+        local Button = Instance.new("TextButton")
+
+        ButtonFrame.Parent = ScrollingFrame
+	ButtonFrame.BackgroundColor3 = Color3.fromRGB(111, 102, 78)
+	ButtonFrame.BackgroundTransparency = 1.000
+	ButtonFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	ButtonFrame.Position = UDim2.new(0, 0, 0.430107534, 0)
+	ButtonFrame.Size = UDim2.new(0, 239, 0, 50)
+
+	Button.Parent = ButtonFrame
+	Button.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+	Button.Position = UDim2.new(0.0227645803, 0, 0.559468389, 0)
+	Button.Size = UDim2.new(0, 233, 0, 16)
+	Button.AutoButtonColor = false
+	Button.Font = Enum.Font.SourceSans
+	Button.Text = text
+	Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Button.TextSize = 14.000
+	end
+	
 	pcall(function()
   		syn.protect_gui(ScreenGui) -- Synapse function makes the ui object undetectable for any non synapse script
 	end)
