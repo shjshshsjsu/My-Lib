@@ -6,7 +6,7 @@ window:Toggle('toggle', function(enabled)
 end)
 
 window:Button('Button', function()
-          print("Button")
+     
      
 end)
 
