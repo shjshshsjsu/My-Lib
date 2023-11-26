@@ -5,8 +5,9 @@ window:Toggle('toggle', function(enabled)
      print(enabled)
 end)
 
-window:Button('Button', function(enabled)
-     print(Button)
+window:Button('Button', function()
+          print("Button")
+     
 end)
 
 
