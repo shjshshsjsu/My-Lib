@@ -80,6 +80,7 @@ local isMinimized = false
 minimizeFrame.MouseButton1Click:Connect(function()
     isMinimized = not isMinimized
     mainFrame.Size = isMinimized and UDim2.new(0, 30, 0, 30) or UDim2.new(0, 400, 0, 300)
+    mainFrame.Position = isMinimized and UDim2.new(0, mainFrame.Position.X.Offset + 185, 0, mainFrame.Position.Y.Offset + 135) or mainFrame.Position
 end)
 
 -- Ana Frame'i kapatma
